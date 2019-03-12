@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if test $# -eq 0
+then
+	echo "No input Java file!"
+elif test $# -eq 1
+then
+	python3 tokenizer.py $1
+elif test $# -eq 2
+then
+	python3 tokenizer.py $1 > $2
+else
+	echo "Too many arguments!"
+fi
